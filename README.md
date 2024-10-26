@@ -24,6 +24,60 @@
 - **Payment Integration**: PayPal for handling payments.
 - **Security**: CSRF protection and secure data handling.
 
+## Front-End Structure
+
+```plaintext
+Frontend-booking-system/
+│
+├── node_modules/
+│
+├── public/
+│   └── images/
+│       └── stethoscope.svg
+│
+├── src/
+│   ├── assets/
+│   │   └── logo.png
+│   │
+│   ├── components/
+│   │   └── Navbar/
+│   │       ├── Navbar.jsx
+│   │       └── Navbar.css
+│   │
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.jsx
+│   │   │   └── Home.css
+│   │   ├── Review/
+│   │   │   ├── Review.jsx
+│   │   │   └── Review.css
+│   │   ├── Services/
+│   │   │   ├── Services.jsx
+│   │   │   └── Services.css
+│   │   ├── Signup/
+│   │   │   ├── Signup.jsx
+│   │   │   └── Signup.css
+│   │   ├── Success/
+│   │   │   ├── Success.jsx
+│   │   │   └── Success.css
+│   │   └── Time/
+│   │       ├── Time.jsx
+│   │       └── Time.css
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+└── README.md
+```
+
+## Screenshots (Soon)
 
 ## To Run The App
 - **npm start** for running the backend
