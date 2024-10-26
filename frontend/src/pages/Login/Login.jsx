@@ -141,8 +141,26 @@ const Login = () => {
                   </span>
                 </div>
               </div>
+              <div className="form-check mb-3">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="remember"
+                  checked={remember}
+                  onChange={() => setRemember(!remember)}
+                />
+                <label className="form-check-label" htmlFor="remember">
+                  Remember me
+                </label>
+              </div>
 
-              <div className="d-flex flex-column justify-content-between align-items-center my-4">
+              <div className="d-flex flex-column justify-content-between align-items-center">
+                <a href="#" className="forgotten mb-2">
+                  Forgotten?
+                </a>
+                
+              </div>
+              <div className="d-flex flex-column justify-content-between align-items-center my-3">
                 <button
                   type="submit"
                   className="btn btn-primary w-50 mb-0"
@@ -152,6 +170,7 @@ const Login = () => {
                   {loading ? "Logging In..." : "Log In"}
                 </button>
               </div>
+              
               <p className="text-center mt-3 dont-have">
                 Don't have an account?{" "}
                 <Link to="/signup" className="signup-word">
