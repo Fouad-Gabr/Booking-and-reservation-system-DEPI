@@ -97,7 +97,7 @@ const Testimonials = () => {
         <div className="row w-100 testimonials-row justify-content-between">
           <Form
             onSubmit={handleSubmit}
-            className="col-md-4 mb-5 card form-card-parent d-flex justify-content-center align-items-center form-card-testimonials p-4 shadow-lg border-0"
+            className="col-md-3 mb-5 mt-3 card form-card-parent d-flex justify-content-center align-items-center form-card-testimonials p-4 shadow-lg border-0"
           >
             <h3 className="submit-your-review mt-3 mb-4">Submit Your Review</h3>
             <Row>
@@ -158,7 +158,7 @@ const Testimonials = () => {
           </Form>
 
           {reviews.length > 0 ? (
-            <Row className="g-4 col-md-8 mt-0">
+            <Row className="g-4 col-md-9 mt-0">
               <h2 className="our-customers my-1">Our Customers Love What We Do</h2>
               <p className="lead my-2">
                 Read their reviews to discover why they're raving about our

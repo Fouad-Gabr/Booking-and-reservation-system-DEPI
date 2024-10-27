@@ -106,7 +106,7 @@ function Home() {
       <div className="container">
         <div className="image-boxes mt-4">
           <div className="row">
-            <div className="col-md-6 col-lg-4 position-relative pb-4 pb-lg-0 img-container">
+            <div className="col-md-6 col-lg-4 position-relative pb-4 pb-lg-0 img-container d-flex flex-column justify-content-center align-items-center">
               <img
                 src="images/Capture - Copy.PNG"
                 alt="Barbershop"
@@ -119,7 +119,7 @@ function Home() {
               />
             </div>
             <div className="col-md-6 col-lg-4 d-flex pb-4 pb-md-0">
-              <div className="two-image d-flex flex-column justify-content-between gap-4">
+              <div className="two-image d-flex flex-column justify-content-center align-items-center gap-4">
                 <div className="position-relative vurve" data-work="vurve">
                   <img
                     src={images[1]}
@@ -143,8 +143,8 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="two-image d-flex flex-column gap-4">
+            <div className="col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+              <div className="two-image d-flex flex-column gap-4 justify-content-center align-items-center">
                 <div>
                   <img
                     src={images[3]}
