@@ -89,7 +89,8 @@ const UserDashboard = () => {
         <div className="row">
           {bookings.length > 0 ? (
             bookings.map((booking, index) => (
-              <div className="col-md-4" key={index}>
+              <div className="col-md-4 d-flex flex-column align-items-center justify-content-between mb-4" key={index}>
+
                 <Booking
                   bookerName={booking.user}
                   service={booking.service}
