@@ -126,7 +126,7 @@ const BookingDetails = ({
       <div className="card booking-card border-light w-sm-100 border">
         <div className="image-and-location d-flex align-items-center justify-content-around p-2">
           <img
-            src="images/service-details.jpg"
+            src="images/bearded-man-having-rehabilitation-after-injury-physiotherapy-clinic_1157-38583c.jpg"
             className="img-fluid book-details-img"
             alt="Service"
           />

@@ -56,19 +56,31 @@ function Navbar() {
                 Home
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/testimonials">
+                Testimonials
+              </Link>
+            </li>
             {loggedIn ? (
               <>
                 {userTypeVar === "admin" ? (
-                  <li className="nav-item">
-                    <span
-                      className="nav-link"
-                      style={{ cursor: "pointer" }}
-                      onClick={handleLogout}
-                    >
-                      <FontAwesomeIcon icon={faSignOutAlt} className="me-1" />
-                      Logout
-                    </span>
-                  </li>
+                  <>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/AdminDashboard">
+                        Admin Dashboard
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <span
+                        className="nav-link"
+                        style={{ cursor: "pointer" }}
+                        onClick={handleLogout}
+                      >
+                        <FontAwesomeIcon icon={faSignOutAlt} className="me-1" />
+                        Logout
+                      </span>
+                    </li>
+                  </>
                 ) : (
                   <>
                     <li className="nav-item">
@@ -76,11 +88,7 @@ function Navbar() {
                         User Dashboard
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/testimonials">
-                        Testimonials
-                      </Link>
-                    </li>
+
                     <li className="nav-item">
                       <span
                         className="nav-link"
