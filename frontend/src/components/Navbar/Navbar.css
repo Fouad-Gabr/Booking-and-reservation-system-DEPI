@@ -118,3 +118,21 @@ a {
 .navbar-toggler-home:focus {
   box-shadow: none !important;
 }
+
+@media (max-width: 992px) {
+  .list-group-item div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .list-group-item div .btn{
+    width: 100%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    margin-left: 0.5rem;
+  }
+  .list-group-item div .btn-warning{
+    margin-right: 0 !important;
+  }
+}
