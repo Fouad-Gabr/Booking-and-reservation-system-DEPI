@@ -10,6 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
+import { NavLink, Route } from "react-router-dom";
 
 function Navbar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -52,26 +53,45 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-lg-auto ps-3 mb-2 mb-lg-0 gap-md-3 gap-lg-4">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "active nav-link" : "inactive nav-link"
+                }
+                data-toggle="tab"
+                to="/"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/testimonials">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "active nav-link" : "inactive nav-link"
+                }
+                data-toggle="tab"
+                to="/testimonials"
+              >
                 Testimonials
-              </Link>
+              </NavLink>
             </li>
             {loggedIn ? (
               <>
                 {userTypeVar === "admin" ? (
                   <>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/AdminDashboard">
+                      <NavLink
+                        className={({ isActive }) =>
+                          isActive ? "active nav-link" : "inactive nav-link"
+                        }
+                        data-toggle="tab"
+                        to="/AdminDashboard"
+                      >
                         Admin Dashboard
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
                       <span
+                        data-toggle="tab"
                         className="nav-link"
                         style={{ cursor: "pointer" }}
                         onClick={handleLogout}
@@ -84,13 +104,20 @@ function Navbar() {
                 ) : (
                   <>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/userDashboard">
+                      <NavLink
+                        className={({ isActive }) =>
+                          isActive ? "active nav-link" : "inactive nav-link"
+                        }
+                        data-toggle="tab"
+                        to="/userDashboard"
+                      >
                         User Dashboard
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
                       <span
+                        data-toggle="tab"
                         className="nav-link"
                         style={{ cursor: "pointer" }}
                         onClick={handleLogout}
@@ -105,14 +132,26 @@ function Navbar() {
             ) : (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/login">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "active nav-link" : "inactive nav-link"
+                    }
+                    data-toggle="tab"
+                    to="/login"
+                  >
                     Login
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/signup">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "active nav-link" : "inactive nav-link"
+                    }
+                    data-toggle="tab"
+                    to="/signup"
+                  >
                     Sign Up
-                  </Link>
+                  </NavLink>
                 </li>
               </>
             )}

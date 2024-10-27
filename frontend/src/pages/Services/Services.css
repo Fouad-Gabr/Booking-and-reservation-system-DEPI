@@ -40,10 +40,6 @@
   -o-transition: 0.3s;
 }
 
-.services {
-  height: calc(100vh - 112px);
-}
-
 .services-parent .details {
   width: 100%;
 }
