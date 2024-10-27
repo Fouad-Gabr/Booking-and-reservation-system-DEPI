@@ -23,15 +23,25 @@ function Home() {
   const navigate = useNavigate();
 
   const images = [
-    "images/num-one.jpg",
-    "images/num-two-1.jpg",
-    "images/num-two-2.jpg",
-    "images/num-three-1.jpg",
-    "images/num-three-2.jpg",
-    "images/num-4.jpg",
-    "images/num-5.jpg",
-    "images/num-6.jpg",
-    "images/num-7.jpg",
+    "images/Capture.PNG",
+    "images/front-view-athlete-doing-physiotherapy_23-2149866136.jpg",
+    "images/bearded-man-using-spin-bike-physiotherapy-room_1157-38166c.jpg",
+    "images/stock-photo-bearded-man-sportswear-training-exercise-machine-young-physician-kinesio-center.jpg",
+    "images/medium-shot-man-helping-patient.jpg",
+    "images/img - Copy.jpg",
+    "images/man-medical-office-physiotherapist-is-rehabilitating-back_1157-44706.jpg",
+    "images/side-view-physiotherapist-posing-work_23-2149866144.jpg",
+    "images/istockphoto-1501185786-1024x1024.jpg",
+    "images/Capture2.PNG",
+    "images/istockphoto-1384499192-1024x1024.jpg",
+    "images/240_F_503947158_z0skDG8qa7KYSrJhJ0w4le54oJgGufB8.jpg",
+    "images/istockphoto-1396861229-1024x1024.jpg",
+    "images/bearded-man-having-rehabilitation-after-injury-physiotherapy-clinic_1157-38583c.jpg",
+    "images/1000_F_272760235_In1JYdWYVei4K8wvIa2n9p0Ol1zWoTPw.jpg",
+    "images/1000_F_59201291_KSasis9jvvCrLbGJ9sYollXuxtcFzsm9.jpg",
+    "images/1000_F_58376364_bzuxjKuNbfCJjHUh2618UOyzzpfdal92.jpg",
+    "images/img222.jpg",
+    "images/guy-doing-exercise-gym_23-2147688518.jpg",
   ];
 
   const handleNextImage = () => {
@@ -94,38 +104,41 @@ function Home() {
   return (
     <div className="landing pt-4 pb-4">
       <div className="container">
-        <div className="Barbershop d-sm-flex justify-content-between pb-3">
-          <nav aria-label="breadcrumb">
-            <ol className="breadcrumb">
-              <li className="breadcrumb-item ">
-                <Link to="#">Home : </Link>
-              </li>
-            </ol>
-          </nav>
-        </div>
-        <div className="image-boxes">
+        <div className="image-boxes mt-4">
           <div className="row">
-            <div className="col-md-6 col-lg-4 position-relative pb-4 pb-lg-0">
+            <div className="col-md-6 col-lg-4 position-relative pb-4 pb-lg-0 img-container">
               <img
-                src="images/num-one.jpg"
+                src="images/Capture - Copy.PNG"
                 alt="Barbershop"
-                className="img-fluid full-height position-relative  object-fit-cover"
+                className="img-fluid position-relative  object-fit-cover"
+              />
+              <img
+                src={images[13]}
+                alt="Barbershop service 2"
+                className="img-fluid mt-4"
               />
             </div>
-            <div className="col-md-6 col-lg-4 pb-4 pb-md-0">
-              <div className="two-image d-flex flex-column gap-4">
+            <div className="col-md-6 col-lg-4 d-flex pb-4 pb-md-0">
+              <div className="two-image d-flex flex-column justify-content-between gap-4">
                 <div className="position-relative vurve" data-work="vurve">
                   <img
-                    src="images/num-two-1.jpg"
+                    src={images[1]}
                     alt="Barbershop interior 1"
-                    className="img-fluid"
+                    className="img-fluid mb-0"
                   />
                 </div>
                 <div>
                   <img
-                    src="images/num-two-2.jpg"
+                    src="images/logo.PNG"
                     alt="Barbershop interior 2"
-                    className="img-fluid"
+                    className="img-fluid m-0"
+                  />
+                </div>
+                <div className="img-container">
+                  <img
+                    src="images/img.jpg"
+                    alt="Barbershop interior 2"
+                    className="img-fluid mt-0"
                   />
                 </div>
               </div>
@@ -134,17 +147,18 @@ function Home() {
               <div className="two-image d-flex flex-column gap-4">
                 <div>
                   <img
-                    src="images/num-three-1.jpg"
+                    src={images[3]}
                     alt="Barbershop service 1"
                     className="img-fluid"
                   />
                 </div>
-                <div className="position-relative">
+                <div className="position-relative img-container">
                   <img
-                    src="images/num-three-2.jpg"
+                    src="images/medium-shot-man-helping-patient - Copy.jpg"
                     alt="Barbershop service 2"
                     className="img-fluid"
                   />
+
                   <button
                     onClick={() => setIsModalOpen(true)}
                     className="btn position-absolute btn-see-all"

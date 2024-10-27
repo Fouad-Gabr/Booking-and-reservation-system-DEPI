@@ -112,10 +112,16 @@
 
 }
 
-@media (max-width:767px) {
+@media (max-width:768px) {
     .business-card .info-shop {
         flex-direction: column;
+    }
 
+    .img-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 

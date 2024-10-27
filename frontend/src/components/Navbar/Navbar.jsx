@@ -51,6 +51,11 @@ function Navbar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav ms-lg-auto ps-3 mb-2 mb-lg-0 gap-md-3 gap-lg-4">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
             {loggedIn ? (
               <>
                 {userTypeVar === "admin" ? (
