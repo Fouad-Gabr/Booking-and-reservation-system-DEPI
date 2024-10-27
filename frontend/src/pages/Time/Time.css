@@ -6,3 +6,21 @@
     background-color: var(--body-color);
     padding: 20px;
 }
+
+.time .time-slot{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.time .time-slot:focus{
+    box-shadow: none;
+    background-color: #0aa9de;
+}
+
+.time .time-slot:active{
+    box-shadow: none;
+    background-color: #0aa9de;
+}
