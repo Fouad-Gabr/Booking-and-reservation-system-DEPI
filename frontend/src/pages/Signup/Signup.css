@@ -13,6 +13,7 @@
 }
 
 .form-card-parent {
+  height: fit-content !important;
   background-color: #6440b3;
   border-radius: 15px;
   max-width: 380px;
@@ -93,4 +94,12 @@ a {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+}
+
+.left-text-easy{
+  transform: translateY(-40%);
+  -webkit-transform: translateY(-40%);
+  -moz-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  -o-transform: translateY(-40%);
 }

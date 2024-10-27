@@ -101,8 +101,8 @@ const Signup = () => {
   return (
     <div className="container-fluid h-sm-auto signup-page d-flex align-items-center justify-content-center p-0">
       <div className="row w-100">
-        <div className="col-md-6 d-flex h-sm-auto align-items-center justify-content-center right-section p-2">
-          <div className="card form-card-parent h-sm-auto px-4 pt-3 pb-1 shadow-lg border-0">
+        <div className="col-md-6 d-flex h-sm-auto justify-content-center right-section p-2">
+          <div className="card form-card-parent h-sm-auto px-4 pt-3 pb-1 shadow-lg border-0 my-4">
             <h2 className="text-center mb-3 form-title">
               Sign Up for EasyReserve™
             </h2>
@@ -111,27 +111,32 @@ const Signup = () => {
                 <label htmlFor="name" className="form-label Label">
                   Your Name
                 </label>
-                <input
-                  type="text"
-                  className={`form-control form-control-signup ${
-                    errors.name ? "is-invalid" : ""
-                  }`}
-                  id="name"
-                  placeholder="Enter your name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-                {errors.name && (
-                  <div className="invalid-feedback">{errors.name}</div>
-                )}
+                <div className="input-group">
+                  <input
+                    type="text"
+                    className={`form-control form-control-signup ${
+                      errors.name ? "is-invalid" : ""
+                    }`}
+                    id="name"
+                    placeholder="Enter your name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                  <span className="input-group-text">
+                    <i className="fa-solid fa-user"></i>
+                  </span>
+                  {errors.name && (
+                    <div className="invalid-feedback">{errors.name}</div>
+                  )}
+                </div>
               </div>
 
-              <div className="row mb-3">
-                <div className="col">
-                  <label htmlFor="email" className="form-label Label">
-                    Your Email
-                  </label>
+              <div className="col mb-3">
+                <label htmlFor="email" className="form-label Label">
+                  Your Email
+                </label>
+                <div className="input-group">
                   <input
                     type="email"
                     className={`form-control form-control-signup ${
@@ -143,15 +148,20 @@ const Signup = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
+                  <span className="input-group-text">
+                    <i className="fa-solid fa-envelope"></i>
+                  </span>
                   {errors.email && (
                     <div className="invalid-feedback">{errors.email}</div>
                   )}
                 </div>
+              </div>
 
-                <div className="col">
-                  <label htmlFor="phone" className="form-label Label">
-                    Your Phone Number
-                  </label>
+              <div className="col mb-3">
+                <label htmlFor="phone" className="form-label Label">
+                  Your Phone Number
+                </label>
+                <div className="input-group">
                   <input
                     type="text"
                     className={`form-control form-control-signup ${
@@ -163,6 +173,9 @@ const Signup = () => {
                     onChange={(e) => setPhone(e.target.value.trim())}
                     required
                   />
+                  <span className="input-group-text">
+                    <i className="fa-solid fa-phone"></i>
+                  </span>
                   {errors.phone && (
                     <div className="invalid-feedback">{errors.phone}</div>
                   )}
@@ -170,46 +183,58 @@ const Signup = () => {
               </div>
 
               {/* Password Input */}
-              <div className="mb-3">
-                <label htmlFor="password" className="form-label Label">
-                  Your Password
-                </label>
-                <input
-                  type="password"
-                  className={`form-control form-control-signup ${
-                    errors.password ? "is-invalid" : ""
-                  }`}
-                  id="password"
-                  placeholder="Enter your password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-                {errors.password && (
-                  <div className="invalid-feedback">{errors.password}</div>
-                )}
-              </div>
-
-              <div className="mb-3">
-                <label htmlFor="confirmPassword" className="form-label Label">
-                  Confirm Password
-                </label>
-                <input
-                  type="password"
-                  className={`form-control form-control-signup ${
-                    errors.confirmPassword ? "is-invalid" : ""
-                  }`}
-                  id="confirmPassword"
-                  placeholder="Confirm your password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  required
-                />
-                {errors.confirmPassword && (
-                  <div className="invalid-feedback">
-                    {errors.confirmPassword}
+              <div className="row mb-3">
+                <div className="col">
+                  <label htmlFor="password" className="form-label Label">
+                    Your Password
+                  </label>
+                  <div className="input-group">
+                    <input
+                      type="password"
+                      className={`form-control form-control-signup ${
+                        errors.password ? "is-invalid" : ""
+                      }`}
+                      id="password"
+                      placeholder="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                    <span className="input-group-text">
+                      <i className="fa-solid fa-key"></i>
+                    </span>
+                    {errors.password && (
+                      <div className="invalid-feedback">{errors.password}</div>
+                    )}
                   </div>
-                )}
+                </div>
+
+                <div className="col">
+                  <label htmlFor="confirmPassword" className="form-label Label">
+                    Confirm Password
+                  </label>
+                  <div className="input-group">
+                    <input
+                      type="password"
+                      className={`form-control form-control-signup ${
+                        errors.confirmPassword ? "is-invalid" : ""
+                      }`}
+                      id="confirmPassword"
+                      placeholder="Confirm"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      required
+                    />
+                    <span className="input-group-text">
+                      <i className="fa-solid fa-key"></i>
+                    </span>
+                    {errors.confirmPassword && (
+                      <div className="invalid-feedback">
+                        {errors.confirmPassword}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
 
               <div className="form-check mb-3">
@@ -247,7 +272,7 @@ const Signup = () => {
                 </button>
               </div>
 
-              <p className="text-center mt-3 already-word">
+              <p className="text-center mt-3 already-word mb-4">
                 Already have an account?{" "}
                 <Link to="/login" className="login-word">
                   Log In
@@ -258,7 +283,7 @@ const Signup = () => {
         </div>
 
         <div className="col-md-6 d-none d-md-flex align-items-center justify-content-center left-section">
-          <div className="text-center text-white">
+          <div className="text-center text-white left-text-easy">
             <h1 className="fs-1 website-name">EasyReserve™</h1>
             <p className="text-white-50">Your Path to Recovery Starts Here</p>
             <p>Join us to access personalized physical therapy services.</p>
