@@ -1,157 +1,164 @@
 :root {
-    --main-color: #322A7D;
-    --body-color: #F7F8FA;
-    --black-color: #11141A;
+  --main-color: #322a7d;
+  --body-color: #f7f8fa;
+  --black-color: #11141a;
 }
 
 .landing {
-    background-color: var(--body-color);
+  background-color: var(--body-color);
 }
 
 .breadcrumb {
-    background-color: transparent;
-    padding: 0;
-    margin-bottom: 0;
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
-    content: "•";
-    color: #6c757d;
-    padding: 0 5px;
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "•";
+  color: #6c757d;
+  padding: 0 5px;
 }
 
 .breadcrumb a {
-    color: #6c757d;
+  color: #6c757d;
 }
 
 .breadcrumb-item.active {
-    font-weight: bold;
-    color: var(--black-color);
+  font-weight: bold;
+  color: var(--black-color);
 }
 
 .btn-custom {
-    border-radius: 25px;
-    font-size: 14px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    color: #000;
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #000;
 }
 
 .landing .image-boxes .full-height {
-    height: 100%;
+  height: 100%;
 }
 
 .landing .image-boxes img {
-    border-radius: 12px;
+  border-radius: 12px;
 }
 
 .landing .image-boxes .row .vurve::before {
-    content: attr(data-work);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: var(--body-color);
-    font-size: 22px;
-    transform: translate(-50%, -50%);
-    letter-spacing: 15.5px;
-    font-weight: bold;
+  content: attr(data-work);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--body-color);
+  font-size: 22px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 15.5px;
+  font-weight: bold;
+}
+
+.btn-enquire:focus,
+.btn-book-now:focus {
+  box-shadow: none;
 }
 
 .btn-see-all {
-    bottom: 15px;
-    right: 15px;
-    color: var(--black-color);
-    background-color: var(--body-color);
-    border-radius: 15px;
-    transition: 0.3s ease;
-    cursor: pointer;
+  bottom: 15px;
+  right: 15px;
+  color: var(--black-color);
+  background-color: var(--body-color);
+  border-radius: 15px;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-see-all:hover {
-    color: var(--body-color);
-    background-color: var(--black-color);
+  color: var(--body-color);
+  background-color: var(--black-color);
 }
 
 .business-card {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .business-status {
-    color: orange;
-    font-weight: bold;
+  color: orange;
+  font-weight: bold;
 }
 
 .business-info i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .btn-enquire {
-    background-color: #e9ecef;
-    color: #6c757d;
-    border: none;
+  background-color: #e9ecef;
+  color: #6c757d;
+  border: none;
 }
 
 .btn-book-now {
-    background-color: var(--main-color);
-    color: #fff;
+  background-color: var(--main-color);
+  color: #fff;
 }
 
 .btn-book-now:hover {
-    color: #ffc107;
+  color: #ffc107;
+}
+
+.btn-enquire:hover {
+  background-color: #ffc107;
+  color: white;
 }
 
 .btn-book-now:hover {
-    background-color: var(--main-color);
+  background-color: var(--main-color);
 }
 
 .stars svg {
-    color: gold;
-
+  color: gold;
 }
 
-@media (max-width:768px) {
-    .business-card .info-shop {
-        flex-direction: column;
-    }
+@media (max-width: 768px) {
+  .business-card .info-shop {
+    flex-direction: column;
+  }
 
-    .img-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .modal {
-    top: 50px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+  top: 50px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
 }
 
 .modal-content {
-    border-radius: 8px;
-    width: 90%;
-    max-width: 800px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
 }
 
-
-
 .arrow {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }

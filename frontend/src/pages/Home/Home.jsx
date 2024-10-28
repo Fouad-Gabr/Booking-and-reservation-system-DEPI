@@ -22,6 +22,9 @@ function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
+  const userTypeVar = localStorage.getItem("userType");
+  const loggedIn = localStorage.getItem("loggedIn");
+
   const images = [
     "images/Capture.PNG",
     "images/front-view-athlete-doing-physiotherapy_23-2149866136.jpg",
@@ -91,6 +94,10 @@ function Home() {
   useEffect(() => {
     checkBusinessStatus();
   }, []);
+
+  const handleYourDashboard = () => {
+    navigate("/adminDashboard");
+  };
 
   const handleBookNowClick = () => {
     const token = localStorage.getItem("token");
@@ -204,13 +211,44 @@ function Home() {
             <div className="d-flex justify-content-between">
               <h4 className="fw-bold">FlexiHealth</h4>
               <div className="d-flex">
-                <button className="btn btn-enquire me-2">Enquire</button>
-                <button
-                  className="btn btn-book-now"
-                  onClick={handleBookNowClick}
-                >
-                  Book now
-                </button>
+                {loggedIn ? (
+                  <>
+                    {userTypeVar === "user" ? (
+                      <>
+                        <button className="btn btn-enquire me-2">
+                          Enquire
+                        </button>
+
+                        <button
+                          className="btn btn-book-now"
+                          onClick={handleBookNowClick}
+                        >
+                          Book now
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          className="btn btn-book-now"
+                          onClick={handleYourDashboard}
+                        >
+                          your Dashboard
+                        </button>
+                      </>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <button className="btn btn-enquire me-2">Enquire</button>
+
+                    <button
+                      className="btn btn-book-now"
+                      onClick={handleBookNowClick}
+                    >
+                      Book now
+                    </button>
+                  </>
+                )}
               </div>
             </div>
             <div className="info-shop d-flex pt-3">
