@@ -23,3 +23,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.tab-content .row .card, .userDashboard-row .card{
+    height: 100%;
+}
