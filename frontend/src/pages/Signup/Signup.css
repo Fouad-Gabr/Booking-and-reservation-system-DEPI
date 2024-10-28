@@ -103,3 +103,16 @@ a {
   -ms-transform: translateY(-40%);
   -o-transform: translateY(-40%);
 }
+
+@media (max-width : 930px) {
+  .right-section{
+    padding: 2rem !important;
+  }
+  .password-full{
+    flex-direction: column;
+  }
+
+  .your-pass{
+    margin-bottom: 1rem !important;
+  }
+}

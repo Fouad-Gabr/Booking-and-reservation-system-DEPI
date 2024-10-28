@@ -183,8 +183,8 @@ const Signup = () => {
               </div>
 
               {/* Password Input */}
-              <div className="row mb-3">
-                <div className="col">
+              <div className="row mb-3 password-full">
+                <div className="col your-pass">
                   <label htmlFor="password" className="form-label Label">
                     Your Password
                   </label>
@@ -209,7 +209,7 @@ const Signup = () => {
                   </div>
                 </div>
 
-                <div className="col">
+                <div className="col your-pass">
                   <label htmlFor="confirmPassword" className="form-label Label">
                     Confirm Password
                   </label>
