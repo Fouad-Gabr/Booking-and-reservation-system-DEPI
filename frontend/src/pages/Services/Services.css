@@ -105,10 +105,22 @@
   width: 70% !important;
 }
 
+@media (max-width: 767px) {
+  .service-first-row {
+    flex-direction: column-reverse !important;
+  }
+}
+
 @media (min-width: 992px) {
   .services input[type="search"]:focus {
     outline: none;
     box-shadow: none;
     width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .details .service-name {
+    flex-direction: column !important;
   }
 }

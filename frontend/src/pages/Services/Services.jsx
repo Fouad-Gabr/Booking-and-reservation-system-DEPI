@@ -13,6 +13,7 @@ function Services() {
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const { selectedServices, setSelectedServices } = useContext(SelectedServicesContext);
+  // const [selectOne, setSelectOne] = useState(null)
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -32,12 +33,16 @@ function Services() {
     fetchServices();
   }, []);
 
+  localStorage.setItem("selectOne", false)
+  const selectOne = localStorage.getItem("selectOne")
+  
   const handleSelectService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((s) => s !== service));
     } else {
       setSelectedServices([...selectedServices, service]);
     }
+    localStorage.setItem(selectOne, true)
   };
 
   const handleSearchChange = (e) => {
@@ -80,7 +85,7 @@ function Services() {
             </h4>
           </div>
         </div>
-        <div className="row">
+        <div className="row service-first-row">
           <div className="col-md-9">
             <div className="services-parent d-flex flex-column bg-white rounded p-3">
               {filteredServices.length > 0 ? (
@@ -107,7 +112,8 @@ function Services() {
               dateTime="Sun 16 July 2023 at 5:00pm"
               duration="1h"
               showDateTime={false}
-              showButtonNext={true} // Keep the "Next" button here
+              showButtonNext={true}
+              nextButtonDisabled={!selectOne}
             />
           </div>
         </div>
