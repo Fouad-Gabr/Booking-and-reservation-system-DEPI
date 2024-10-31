@@ -13,7 +13,7 @@ function Services() {
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const { selectedServices, setSelectedServices } = useContext(SelectedServicesContext);
-  // const [selectOne, setSelectOne] = useState(null)
+  const [selectOne, setSelectOne] = useState(null)
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -33,16 +33,17 @@ function Services() {
     fetchServices();
   }, []);
 
-  localStorage.setItem("selectOne", false)
-  const selectOne = localStorage.getItem("selectOne")
-  
+  useEffect(() => {
+    console.log("Effect running");
+    setSelectOne(selectedServices.length > 0);
+  }, [selectedServices]);
+
   const handleSelectService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((s) => s !== service));
     } else {
       setSelectedServices([...selectedServices, service]);
     }
-    localStorage.setItem(selectOne, true)
   };
 
   const handleSearchChange = (e) => {
