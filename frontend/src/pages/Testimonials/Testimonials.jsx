@@ -21,30 +21,31 @@ const Testimonials = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/review", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+  const fetchReviews = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/review", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-        const data = await isJSON(response);
-        console.log(data, "hell from data in testmonials");
-        if (!data) {
-          throw new Error("Invalid JSON response from server.");
-        }
-
-        if (!response.ok) {
-          throw new Error(data.error.message || "Error fetching reviews.");
-        }
-
-        setReviews(data);
-      } catch (error) {
-        toast.error(`Error: ${error.message}`, { position: "top-center" });
+      const data = await isJSON(response);
+      console.log(data, "hell from data in testmonials");
+      if (!data) {
+        throw new Error("Invalid JSON response from server.");
       }
-    };
+
+      if (!response.ok) {
+        throw new Error(data.error.message || "Error fetching reviews.");
+      }
+
+      setReviews(data);
+    } catch (error) {
+      toast.error(`Error: ${error.message}`, { position: "top-center" });
+    }
+  };
+
+  useEffect(() => {
     fetchReviews();
   }, []);
 
@@ -65,7 +66,6 @@ const Testimonials = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newReview),
-        params: { userId: "" }, // will be changed to get user id from token
       });
 
       const data = await isJSON(response);
@@ -78,13 +78,9 @@ const Testimonials = () => {
       }
 
       toast.success("Review added successfully!", { position: "top-center" });
+      fetchReviews();
 
       setNewReview({ user: "", review: "", rating: 5, title: "" });
-      const updatedReviews = await fetch("/api/reviews");
-      const updatedData = await isJSON(updatedReviews);
-      if (updatedData) {
-        setReviews(updatedData);
-      }
     } catch (error) {
       toast.error(`Error: ${error.message}`, { position: "top-center" });
     }
@@ -159,7 +155,9 @@ const Testimonials = () => {
 
           {reviews.length > 0 ? (
             <Row className="g-4 col-md-9 mt-0">
-              <h2 className="our-customers my-1">Our Customers Love What We Do</h2>
+              <h2 className="our-customers my-1">
+                Our Customers Love What We Do
+              </h2>
               <p className="lead my-2">
                 Read their reviews to discover why they're raving about our
                 quality, service, and overall experience.
