@@ -39,7 +39,7 @@ const Time = () => {
       <div className="container mt-4">
         <p>Step 2 of 3:</p>
         <h3 className="fw-bold">Select Time</h3>
-        <div className="row">
+        <div className="row time-row">
           <div className="col-md-9">
             <TimeSelection
               selectedTime={selectedTime}

@@ -24,3 +24,9 @@
     box-shadow: none;
     background-color: #0aa9de;
 }
+
+@media (max-width: 767px) {
+    .time-row{
+        flex-direction: column-reverse !important;
+    }
+}
