@@ -1,5 +1,11 @@
 .review {
     background-color: var(--body-color);
     padding: 20px;
-    height: 100%;
+    height: calc(100vh - 112px);
+}
+
+@media (max-width: 767px) {
+    .review{
+    height: 100% !important;
+    }
 }
