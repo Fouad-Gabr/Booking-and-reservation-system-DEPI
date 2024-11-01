@@ -2,10 +2,10 @@
   "name": "dential-app",
   "version": "1.0.0",
   "description": "dential app enable to take appointment and show the appointment to user and doctor",
-  "main": "app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "MohamedAymanSoliman",
