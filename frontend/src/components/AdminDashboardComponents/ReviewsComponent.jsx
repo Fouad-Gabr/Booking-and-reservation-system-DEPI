@@ -7,7 +7,7 @@ const ReviewsComponent = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/review",{headers:{"token":localStorage.getItem("token")}})
+      .get(`${import.meta.env.BACKEND_URL}/review`,{headers:{"token":localStorage.getItem("token")}})
       .then((response) => {
         setReviews(response.data);
       })

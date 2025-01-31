@@ -61,7 +61,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/workdays")
+      .get(`${import.meta.env.BACKEND_URL}/workdays`)
       .then((response) => {
         const data = response.data;
         if (data && data[0].startWorkDay && data[0].endWorkDay) {
