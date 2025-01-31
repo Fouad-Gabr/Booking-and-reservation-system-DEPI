@@ -10,7 +10,7 @@ const BookingsComponent = () => {
 
   const fetchBookings = () => {
     axios
-      .get(`${import.meta.env.BACKEND_URL}/appointments/month/`, {
+      .get(`${import.meta.env.BASE_URL}/appointments/month/`, {
         headers: {
           token: localStorage.getItem("token"),
           year: year,
@@ -27,7 +27,7 @@ const BookingsComponent = () => {
 
   const handleCancelBooking = (bookingId) => {
     axios
-      .delete(`${import.meta.env.BACKEND_URL}/appointments/cancel`, {
+      .delete(`${import.meta.env.BASE_URL}/appointments/cancel`, {
         headers: {
           token: localStorage.getItem("token"),
           appointmentId: bookingId,

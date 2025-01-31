@@ -18,7 +18,7 @@ function Services() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.BACKEND_URL}/services`);
+        const response = await axios.get(`${import.meta.env.BASE_URL}/services`);
         if (Array.isArray(response.data)) {
           setServices(response.data);
           setFilteredServices(response.data);

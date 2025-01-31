@@ -7,7 +7,7 @@ const ReviewsComponent = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.BACKEND_URL}/review`,{headers:{"token":localStorage.getItem("token")}})
+      .get(`${import.meta.env.BASE_URL}/review`,{headers:{"token":localStorage.getItem("token")}})
       .then((response) => {
         setReviews(response.data);
       })

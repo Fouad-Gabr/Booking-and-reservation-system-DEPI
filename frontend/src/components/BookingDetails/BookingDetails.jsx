@@ -63,7 +63,7 @@ const BookingDetails = ({
       ];
 
       const response = await axios.post(
-        `${import.meta.env.BACKEND_URL}/paypal/create-order`,
+        `${import.meta.env.BASE_URL}/paypal/create-order`,
         {
           items,
           cost: price,
@@ -100,7 +100,7 @@ const BookingDetails = ({
 
     try {
       console.log(appointmentData, 'hello from appointment data');
-      const response = await axios.post(`${import.meta.env.BACKEND_URL}/appointments`, 
+      const response = await axios.post(`${import.meta.env.BASE_URL}/appointments`, 
       appointmentData, // This is the request body
       {
         headers: {

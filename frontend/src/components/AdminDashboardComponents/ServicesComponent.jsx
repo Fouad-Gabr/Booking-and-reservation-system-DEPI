@@ -14,7 +14,7 @@ const ServicesComponent = () => {
 
   const fetchServices = () => {
     axios
-      .get(`${import.meta.env.BACKEND_URL}/services`, {
+      .get(`${import.meta.env.BASE_URL}/services`, {
         headers: { token: localStorage.getItem("token") },
       })
       .then((response) => {
@@ -39,7 +39,7 @@ const ServicesComponent = () => {
       };
 
       axios
-        .put(`${import.meta.env.BACKEND_URL}/services/update-service`, updateService, {
+        .put(`${import.meta.env.BASE_URL}/services/update-service`, updateService, {
           headers: { token: localStorage.getItem("token") },
         })
         .then(() => {
@@ -53,7 +53,7 @@ const ServicesComponent = () => {
         });
     } else {
       axios
-        .post(`${import.meta.env.BACKEND_URL}/services`, newService, {
+        .post(`${import.meta.env.BASE_URL}/services`, newService, {
           headers: { token: localStorage.getItem("token") },
         })
         .then(() => {
@@ -71,7 +71,7 @@ const ServicesComponent = () => {
   const handleDeleteService = (serviceName) => {
     console.log("Deleting service:", serviceName);
     axios
-      .delete(`${import.meta.env.BACKEND_URL}/services/delete-service`, {
+      .delete(`${import.meta.env.BASE_URL}/services/delete-service`, {
         headers: {
           token: localStorage.getItem("token"),
           name: serviceName,

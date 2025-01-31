@@ -40,7 +40,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${import.meta.env.BACKEND_URL}/token/`,
+        `${import.meta.env.BASE_URL}/token/`,
         {},
         {
           headers: {
