@@ -71,7 +71,7 @@ const TimeSelection = ({
 
     try {
       const response = await axios.get(
-        `${import.meta.env.BASE_URL}/appointments/available-times/`,
+        "http://localhost:3000/appointments/available-times/",
         {
           params: { year: year, month: month, day: dayOfMonth },
         }

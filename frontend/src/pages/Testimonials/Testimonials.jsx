@@ -23,7 +23,7 @@ const Testimonials = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}/review`, {
+      const response = await fetch("http://localhost:3000/review", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -60,7 +60,7 @@ const Testimonials = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}/review`, {
+      const response = await fetch("http://localhost:3000/review", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
