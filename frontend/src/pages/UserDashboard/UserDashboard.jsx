@@ -15,7 +15,7 @@ const UserDashboard = () => {
   const fetchBookings = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/appointments/user",
+        `${import.meta.env.BASE_URL}/appointments/user`,
         {
           headers: {
             token: localStorage.getItem("token"),
@@ -48,7 +48,7 @@ const UserDashboard = () => {
   const handleCancelBooking = async (bookingId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/appointments/cancel/${bookingId}`,
+        `${import.meta.env.BASE_URL}/appointments/cancel/${bookingId}`,
         {
           headers: {
             token: localStorage.getItem("token"),

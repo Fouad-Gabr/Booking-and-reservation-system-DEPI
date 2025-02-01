@@ -8,7 +8,7 @@ const WorkdaysComponent = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/workdays",{headers:{"token":localStorage.getItem("token")}})
+      .get(`${import.meta.env.BASE_URL}/workdays`,{headers:{"token":localStorage.getItem("token")}})
       .then((response) => {
         const { startWorkDay, endWorkDay } = response.data[0];
         console.log(startWorkDay,endWorkDay , 'hello from this');
@@ -27,7 +27,7 @@ const WorkdaysComponent = () => {
     };
 
     axios
-      .put("http://localhost:3000/workdays", updatedDays,{headers:{"token":localStorage.getItem("token")}})
+      .put(`${import.meta.env.BASE_URL}/workdays`, updatedDays,{headers:{"token":localStorage.getItem("token")}})
       .then(() => {
         toast.success("Clinic Days updated successfully!");
       })
@@ -43,7 +43,7 @@ const WorkdaysComponent = () => {
     };
 
     axios
-      .put("http://localhost:3000/workdays", updatedDays,{headers:{"token":localStorage.getItem("token")}})
+      .put(`${import.meta.env.BASE_URL}/workdays`, updatedDays,{headers:{"token":localStorage.getItem("token")}})
       .then(() => {
         toast.success("Clinic Days updated successfully!");
       })
