@@ -64,7 +64,7 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post(`${import.meta.env.BASE_URL}/${route}`, data);
+      const response = await axios.post(`http://localhost:3000/${route}`, data);
 
       console.log("Response:", response.data);
 
