@@ -40,7 +40,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "z/token/",
+        "http://localhost:3000/token/",
         {},
         {
           headers: {
